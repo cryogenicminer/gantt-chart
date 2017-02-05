@@ -35,3 +35,12 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+- Sheetrock.js for databsase maegment: http://chriszarate.github.io/sheetrock/
+
+-Sortable.js for location movable elemetns: https://customelements.io/RubaXa/Sortable/
+
+-Dragable Divs is going to neded to be a custom webcomponent by cry A ganntchart element, with sub ganntchart gannt-bar class effects.s
+
+-On second thought, I think we should use a textbases systyem for future proorfing, and better readibility. 
