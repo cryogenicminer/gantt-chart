@@ -44,4 +44,6 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 -Dragable Divs is going to neded to be a custom webcomponent by cry A ganntchart element, with sub ganntchart gannt-bar class effects.s
 
 -On second thought, I think we should use a textbases systyem for future proorfing, and better readibility.
+
+-convert to ems? maybe this will help standardize it for 5k imac user etc. 
 ```
