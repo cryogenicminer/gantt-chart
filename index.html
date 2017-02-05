@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ganntChart</title>
+    <!-- <script src="http://rubaxa.github.io/Sortable/Sortable.js"></script> -->
+    <style>
+      body {
+        background: #2c3e50;
+      }
+      .gantt-chart {
+        background: #bdc3c7;
+        padding: 10px;
+        height: 108px;
+      }
+      .gantt-chart * {
+        /*border: 1px solid black;*/
+      }
+      .gantt-bar {
+        background: #EF6C00;
+        margin-bottom: 5px;
+        padding: 5px;
+        height: 15px;
+        float: left;
+      }
+      .gantt-bar-container {
+        height: 25px;
+      }
+      .gantt-bar-container .gantt-bar+.gantt-bar {
+        clear:left;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="gantt-chart">
+
+      <div class="gantt-bar-container">
+        <div class="gantt-bar" style="width: 50px;">bar1</div>
+      </div>
+
+      <div class="gantt-bar-container">
+        <div class="gantt-bar" style="width: 150px;">bar2</div>
+      </div>
+
+      <div class="gantt-bar-container">
+        <div class="gantt-bar" style="width: 75px;">bar3</div>
+      </div>
+
+      <div class="gantt-bar-container">
+        <div class="gantt-bar" style="width: 125px;">bar4</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
