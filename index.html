@@ -95,8 +95,13 @@
       bar.style.width = w + 'px';
       var doc = document.querySelectorAll('.gantt-bar-container');
       doc[n].appendChild(bar);
-     }
+    }
+
+
+
+
      console.log(readTextFile('data.txt'));
+    var allText;
      function readTextFile(file)
      {
        var rawFile = new XMLHttpRequest();
@@ -104,13 +109,26 @@
        rawFile.onreadystatechange = function () {
          if(rawFile.readyState === 4) {
            if(rawFile.status === 200 || rawFile.status == 0) {
-              var allText = rawFile.responseText;
-                alert(allText);
+              allText = rawFile.responseText;
+                // alert(allText);
               }
             }
           }
           rawFile.send(null);
       }
+      readTextFile('data.txt');
+      // console.log(allText);
+
+      var textLines = allText.match(/^.*((\r\n|\n|\r)|$)/gm);
+      var taskLine = allText.match(/^(?!.*(^	* *-)).*/gm) //tabs or spaces
+      console.log('textLines ' +textLines);
+      console.log('taskLine ' +taskLine);
+
+      // for (var i = 0; i < textLines.length; i++) {
+      //   textLines[i].
+      // }
+
+
 
     // for (var i = 0; i < 10; i++) {
     //   var div = document.createElement('div');
