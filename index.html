@@ -123,11 +123,30 @@
       var taskLine = allText.match(/^(?!.*(^	* *-)).*/gm) //tabs or spaces
       console.log('textLines ' +textLines);
       console.log('taskLine ' +taskLine);
+      console.log(allText.match(/^(?!.*(^	* *-)).*/gm));
 
       // for (var i = 0; i < textLines.length; i++) {
       //   textLines[i].
       // }
 
+      var chart = [];
+
+      projectCount = allText.match(/^(?!.*(^	* *-)).*/gm);
+      for (var i = 0; i < projectCount.length; i++) {
+        var n = Project.create(i);
+        chart.push(n);
+      }
+
+      function addProject(name) {
+        this.name = name;
+        this.due = null;
+        this.tasks = null;
+      }
+      console.log(chart);
+
+      // var chart = Object.create
+
+      //one object for all commonalitys between taska dn projececs...
 
 
     // for (var i = 0; i < 10; i++) {
