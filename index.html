@@ -101,7 +101,7 @@
 
 
      console.log(readTextFile('data.txt'));
-    var allText;
+     var rawData;
      function readTextFile(file)
      {
        var rawFile = new XMLHttpRequest();
@@ -109,7 +109,7 @@
        rawFile.onreadystatechange = function () {
          if(rawFile.readyState === 4) {
            if(rawFile.status === 200 || rawFile.status == 0) {
-              allText = rawFile.responseText;
+              rawData = rawFile.responseText;
                 // alert(allText);
               }
             }
@@ -117,32 +117,49 @@
           rawFile.send(null);
       }
       readTextFile('data.txt');
-      // console.log(allText);
 
-      var textLines = allText.match(/^.*((\r\n|\n|\r)|$)/gm);
-      var taskLine = allText.match(/^(?!.*(^	* *-)).*/gm) //tabs or spaces
-      console.log('textLines ' +textLines);
-      console.log('taskLine ' +taskLine);
-      console.log(allText.match(/^(?!.*(^	* *-)).*/gm));
+      // make a local copy of the data, a chached version if you wish, to wich
+      // we strip it and make it cleanly readable. becore going on and puulling
+      // the objec data out.
 
-      // for (var i = 0; i < textLines.length; i++) {
-      //   textLines[i].
-      // }
+      // var data = rawData.match(/^[ \t]*[\r\n]+/gm); //strip them clean of spaces lean
+      // console.log(data);
+
+      var textLines = data.match(/^.*((\r\n|\n|\r)|$)/gm); //lines
+      var projectLine = data.match(/^(?!.*(^	* *-)).*/gm); //tabs or spaces
+      var projects = [];
+
+      for (var i = 0; i < projectLine.length; i++) {
+        projects[i] = new addProject(projectLine[i]);
+        console.log(projects[i].Name);
+      }
+
+
+      console.log(data);
 
       var chart = [];
 
       projectCount = allText.match(/^(?!.*(^	* *-)).*/gm);
+      console.log(projectCount, projectCount.length);
       for (var i = 0; i < projectCount.length; i++) {
-        var n = Project.create(i);
-        chart.push(n);
+        chart[i] = 1
       }
-
+      // console.log(chart);
       function addProject(name) {
-        this.name = name;
-        this.due = null;
-        this.tasks = null;
+        // console.log('adsfadsf');
+        this.Name = name;
+        this.Due = null;
+        this.Tasks = [];
       }
-      console.log(chart);
+      var array = ['a', 'b', 'c', 'd', 'e'];
+      for (var i = 0; i < array.length; i++) {
+        array[i] = new addProject();
+      }
+      console.log(array[0].Tasks);
+      // var a = new addProject('test');
+      // console.log(a);
+
+      // console.log(chart);
 
       // var chart = Object.create
 
