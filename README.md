@@ -1,3 +1,5 @@
 # Comming to a Git Repository near YOU!
 
-(Chicken Scratchings. Still minning for something description worthy)
+Project Gannt-Chart is on temporary hold due to other priorities. Eventualy we would like to develop a full client-side web-app.
+
+(Chicken Scratchings. Still musing for something description worthy)
